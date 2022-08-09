@@ -1,0 +1,113 @@
+.register {
+  height: var(--screen-mHight);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.register__left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.register__right {
+  height: 100%;
+  width: 60%;
+  z-index: -1;
+  position: absolute;
+  right: 0;
+  box-shadow: -4px 4px 12px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid var(--white-clr);
+  opacity: 0.8;
+  transition: var(--transition-150);
+}
+.register__right > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.register__box {
+  background: var(--white-clr);
+  padding: 1rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: var(--shadow);
+}
+.register__box > h3 {
+  font-size: 1.5rem;
+  color: var(--black-clr);
+  margin-bottom: 1rem;
+}
+.register__box > h3 > span {
+  color: var(--blue-clr);
+}
+.register__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.register__inputs input {
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid rgb(211, 211, 211);
+  outline: none;
+  font-size: 1rem;
+}
+.register__inputs input:focus {
+  border: 1px solid var(--blue-clr);
+  box-shadow: 0 0 5px var(--blue-clr-alt);
+}
+.register__box > p {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.register__box > p > a {
+  color: var(--blue-clr);
+  font-weight: bold;
+}
+.register__btns {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+.register__btns > button,
+.register__btns > a {
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  border: 2px solid transparent;
+  text-decoration: none;
+}
+.register__btns > button {
+  background: var(--blue-clr);
+  color: var(--white-clr);
+}
+.register__btns > button:hover {
+  background: var(--blue-clr-alt);
+}
+.register__btns > a {
+  background: var(--white-clr);
+  color: var(--blue-clr);
+  border-color: var(--blue-clr);
+  text-decoration: none;
+}
+.register__btns > a:hover {
+  color: var(--blue-clr-alt);
+  border-color: var(--blue-clr-alt);
+}
+
+@media screen and (min-width: 768px) {
+  .register__right {
+    width: 40%;
+    opacity: 0.9;
+  }
+  .register__left {
+    flex: 2;
+  }
+}

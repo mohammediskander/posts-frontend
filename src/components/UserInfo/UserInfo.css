@@ -1,0 +1,176 @@
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  min-height: 200px;
+  padding: 1rem;
+  position: relative;
+}
+.userInfo > h3 {
+  color: var(--black-clr);
+}
+.userInfo__username {
+  display: flex;
+  align-items: center;
+}
+.userInfo__username > .userInfo__username-input {
+  margin-right: 25px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+  border: 3px solid var(--blue-clr);
+  outline: none;
+
+  color: var(--blue-clr);
+  width: 180px;
+  font-size: 0.9rem;
+}
+.userInfo__username > .userInfo__username-p {
+  margin-right: 25px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  color: #777;
+  outline: none;
+  width: 180px;
+  font-size: 0.9rem;
+}
+
+.userInfo__username > svg {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  color: var(--gray-clr);
+}
+.userInfo__username-input:focus + svg {
+  color: var(--blue-clr);
+}
+
+.userInfo__username > svg:hover {
+  color: var(--black-clr);
+}
+
+.userInfo__mini,
+.arrowIcon {
+  display: none;
+}
+
+@media screen and (min-width: 991px) {
+  .userInfo__username {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .userInfo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    min-height: 200px;
+    max-height: 270px;
+    padding: 1rem;
+    transition: var(--transition-150);
+    overflow: hidden;
+  }
+
+  .userInfo.active {
+    max-height: 550px;
+    transition: var(--transition-150);
+  }
+
+  .userInfo__mini {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 10px;
+    opacity: 0;
+    transition: var(--transition-300);
+  }
+  .userInfo__mini > p {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+  }
+  .userInfo__mini > p > span {
+    flex: 1;
+    color: #777;
+    font-weight: bold;
+  }
+  .userInfo__delete {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--black-clr-alt);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    opacity: 0.5;
+    transition: var(--transition-150);
+  }
+  .userInfo__delete > p {
+    color: var(--white-clr);
+    font-size: 14px;
+  }
+  .userInfo__delete:hover {
+    opacity: 1;
+  }
+  .userInfo__delete button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--white-clr);
+    color: var(--danger-clr);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .userInfo__delete.active {
+    flex-direction: column;
+    gap: 10px;
+    background: var(--danger-clr);
+    opacity: 1;
+  }
+  .userInfo__delete.active > p {
+    color: var(--white-clr);
+    font-size: 16px;
+  }
+  .userInfo__delete.active button {
+    margin: 0 5px;
+  }
+
+  .userInfo__mini.active {
+    opacity: 1;
+  }
+
+  .arrowIcon {
+    width: 30px;
+    height: 30px;
+    min-height: 30px;
+    border-radius: 50%;
+    background: var(--blue-clr);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition-150);
+  }
+  .arrowIcon > svg {
+    color: var(--white-clr);
+    width: 100%;
+    width: 100%;
+  }
+  .arrowIcon.active {
+    transform: rotate(180deg);
+  }
+}

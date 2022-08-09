@@ -1,0 +1,10 @@
+.avatar {
+  background: var(--white-clr-alt);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.avatar > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
