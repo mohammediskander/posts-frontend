@@ -1,0 +1,128 @@
+.home {
+  padding: 2rem 0;
+}
+.home__feed {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.home__left {
+  flex: 2;
+  position: relative;
+  min-height: 300px;
+}
+.home__left h1 {
+  color: var(--black-clr);
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+  position: relative;
+  width: 15.625rem;
+  text-align: center;
+  margin: 0 auto 2rem auto;
+}
+.home__left h1 > span:first-child {
+  color: var(--blue-clr);
+}
+.home__left h1 > span:last-child {
+  color: var(--black-clr);
+}
+.home__left h1::before,
+.home__left h1::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--blue-clr);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.home__left h1::before {
+  left: 15.625rem;
+}
+.home__left h1::after {
+  right: 15.625rem;
+}
+.home__right {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .home__right {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    gap: 1rem;
+    flex: 1;
+    position: sticky;
+    top: calc(60px + 1rem);
+  }
+  .home__users {
+    background: var(--white-clr);
+    border-radius: 10px;
+    padding: 1rem;
+    position: relative;
+    min-height: 232.67px;
+  }
+  .home__users > h3 {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: var(--black-clr);
+    margin-bottom: 1rem;
+  }
+  .home__users::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 1rem;
+    right: 1rem;
+    background: var(--danger-clr);
+    animation: live 0.7s ease-in-out alternate infinite;
+  }
+  .home__users-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .home__user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--gray-clr);
+    padding: 5px 0;
+  }
+  .home__user-index {
+    display: inline-block;
+    width: 20px;
+  }
+  .home__user span:first-child {
+    font-size: 14px;
+  }
+
+  .home__user span:last-child {
+    font-size: 13px;
+  }
+  .home__userInfo {
+    border-radius: 10px;
+    background: var(--white-clr);
+  }
+
+  .home__left h1::before,
+  .home__left h1::after {
+    width: 100px;
+    height: 3px;
+    border-radius: 5px;
+  }
+}
+
+@keyframes live {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.1;
+  }
+}

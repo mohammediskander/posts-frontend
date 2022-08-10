@@ -1,0 +1,167 @@
+.postForm {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.postForm__left {
+  flex: 2;
+  border-radius: 10px;
+  background: var(--white-clr);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+.postForm__leftPadding {
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  height: 100%;
+  min-height: 200px;
+  position: relative;
+}
+.postForm__avatar {
+  display: none;
+}
+.postForm__left.div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+}
+.postForm__left.div h3 {
+  text-align: center;
+  color: var(--black-clr);
+}
+.postForm__left.div h3 > span {
+  color: var(--danger-clr);
+}
+.postForm__inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+.postForm__input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.postForm__input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.postForm__input label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: var(--white-clr-alt);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.postForm__input input[type="file"] {
+  background: var(--white-clr-alt);
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+}
+.postForm__input > span {
+  font-size: 10px;
+  color: var(--gray-clr);
+}
+.postForm__input > span.fileSizeError {
+  color: var(--danger-clr);
+  animation: fileError 0.5s alternate;
+}
+
+.postForm__input > textarea {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: var(--border);
+  resize: none;
+  outline: none;
+  background: var(--white-clr-alt);
+  transition: var(--transition-150);
+  font-size: 1rem;
+}
+.postForm__input > textarea:focus {
+  background: transparent;
+}
+
+.postForm__inputs button {
+  width: 100px;
+  height: 30px;
+  text-transform: capitalize;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-150);
+  font-size: 1rem;
+}
+.postForm__inputs button:active {
+  transform: scale(0.95);
+}
+.postForm__inputs button {
+  background: var(--blue-clr);
+  color: var(--white-clr);
+}
+.postForm__inputs button:hover {
+  background: var(--blue-clr-alt);
+}
+
+.postForm__right {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .postForm__right {
+    flex: 1;
+    display: block;
+    height: 18.75rem;
+    min-height: 18.75rem;
+    max-height: 18.75rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background: var(--black-clr-alt);
+  }
+  .postForm__right > img {
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
+  }
+  .postForm__left {
+    height: 18.75rem;
+    min-height: 18.75rem;
+    max-height: 18.75rem;
+  }
+
+  .postForm__btns {
+    margin-top: 2rem;
+  }
+  .postForm__left.div {
+    height: inherit;
+    min-height: inherit;
+    max-height: inherit;
+  }
+  .postForm__avatar {
+    display: flex;
+  }
+  .postForm__input > span {
+    font-size: 12px;
+  }
+}
+
+@keyframes fileError {
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+}

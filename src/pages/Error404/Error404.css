@@ -1,0 +1,32 @@
+.error {
+  min-height: var(--screen-mHight);
+  display: grid;
+  place-items: center;
+}
+.error__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.error__container > h1 {
+  font-size: 2rem;
+  color: var(--black-clr);
+}
+.error__svg {
+  width: 12.5rem;
+  height: 12.5rem;
+  background: transparent;
+}
+.error__container > p {
+  font-size: 1.2rem;
+  color: var(--black-clr);
+}
+.error__container > p > span {
+  font-weight: bold;
+  color: var(--blue-clr);
+  background: var(--white-clr);
+  padding: 5px 10px;
+  border-radius: 10px;
+}

@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;700&display=swap");
+
+:root {
+  --bg-clr: #dae0e6;
+  --black-clr: #222;
+  --black-clr-alt: #333;
+  --white-clr: #fff;
+  --white-clr-alt: #eee;
+  --gray-clr: #777;
+  --blue-clr: #7693fc;
+  --blue-clr-alt: #849efc;
+  --danger-clr: #fc7676;
+  --danger-clr-alt: #fc8484;
+  --border: 1px solid lightgray;
+  --transition-150: all 0.15s ease-out;
+  --transition-300: all 0.3s ease-in-out;
+  --screen-mHight: calc(100vh - 110px);
+  --shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", "Cairo", sans-serif;
+
+  background: var(--bg-clr);
+}
+
+textarea,
+input {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 13px;
+}
+.maxWidthScreen {
+  width: 100%;
+  padding: 0 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 550px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 991px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1199px) {
+  .maxWidthScreen {
+    padding: 0rem;
+  }
+}
+
+.app {
+  min-height: var(--screen-mHight);
+}
